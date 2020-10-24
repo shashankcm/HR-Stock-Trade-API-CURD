@@ -18,12 +18,15 @@ createTrade = (req,res) => {
     error: err
   })
 } else {
-  return res.status(201).json({
-    body: trade
-  })
+  return res.status(201).json(trade)
 }
 }
 
+updateTrade = (req, res) => {
+  return res.status(405)
+}
+
 module.exports =  {
-  createTrade
+  createTrade,
+  updateTrade
 }
